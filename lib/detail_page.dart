@@ -35,12 +35,14 @@ class _DetailPageState extends State<DetailPage> {
           IconButton(onPressed: () {}, icon: Icon(Icons.more_horiz_outlined))
         ],
       ),
-      body: Column(
-        children: [
-          BookDetail(book: widget.book),
-          BookCover(book: widget.book),
-          BookReview(book: widget.book)
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            BookDetail(book: widget.book),
+            BookCover(book: widget.book),
+            BookReview(book: widget.book)
+          ],
+        ),
       ),
       bottomNavigationBar: buildBottom(),
     );
